@@ -1,0 +1,28 @@
+
+
+/* Mediaqueries */
+
+@media(min-width:768px){
+
+    .topbar .aside .bars{ display: none;}
+    .topbar .aside .contact{ display: block;}
+    .topbar .nav{ display: flex;}
+
+    .exercices{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media(min-width:992px){
+    .topbar, .main{
+        --pd : 10rem;
+        padding-left: var(--pd);
+        padding-right: var(--pd);
+    }
+    
+    .exercices{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}

@@ -33,7 +33,10 @@ a{
     height: 100dvh;
     background-color: #fafafa;
     overflow: hidden;
+
 }
+
+
 
 
 /* Topbars */
@@ -63,6 +66,7 @@ a{
     place-content: center;
     border-bottom: 3px solid transparent;
     height: var(--topbar-height);
+    cursor: pointer;
 }
 .topbar .nav .active{
     border-bottom-color: #000;
@@ -101,7 +105,13 @@ a{
 
 .main{
     overflow-y: auto;
+    -ms-overflow-style: none; /* Cache la barre sur IE/Edge */
+    scrollbar-width: none; /* Cache la barre sur Firefox */
     /* background-color: blue; */
+    padding: 1rem;
+}
+.main::-webkit-scrollbar {
+    display: none; /* Cache la barre sur Chrome/Safari */
 }
 
 
@@ -168,21 +178,3 @@ a{
     transform: translateX(0px);
 }
 
-
-
-/* Mediaqueries */
-
-@media(min-width:768px){
-
-    .topbar .aside .bars{ display: none;}
-    .topbar .aside .contact{ display: block;}
-    .topbar .nav{ display: flex;}
-    
-}
-
-@media(min-width:992px){
-    .topbar{
-        padding: 0 10rem;
-    }
-    
-}
