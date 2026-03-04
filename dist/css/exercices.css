@@ -7,19 +7,24 @@
     background-color: #fff;
     border: 1px solid #eee;
     border-radius: 5px;
-
 }
 .exercices .item .header{
+    display: grid;
+    gap: 1rem;
     background-color: #000;
     color: #fff;
-    font-size: 2.5rem;
-    text-align: center;
+    /* text-align: center; */
     padding: 1rem;
     border-radius: 5px 5px 0 0;
 
 }
+.exercices .item .header h1{
+    font-size: 4rem;
+    text-align: center;
+}
 .exercices .item .header .state{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 14px;
@@ -28,12 +33,11 @@
     display: grid;
     gap: 1rem;
     padding: 1rem;
+
 }
-.exercices .item .content .group{}
 
 .exercices .item .content .group p{
     color: #444;
-    font-size: 14px;
 }
 .exercices .item .actions{
     padding: 1rem;

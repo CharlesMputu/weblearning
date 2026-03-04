@@ -1,0 +1,48 @@
+
+    [
+
+        {
+            "id" : 1,
+            "status" : "En cours",
+
+            "date" : {
+                "post" : "04/03/2026",
+                "end" : "05/03/2026"
+            },
+
+            "about" : {
+                "title" : "CSS GRID",
+                "desc" : "Création de la structure de jeux de dame avec seulement 5 éléments"
+            },
+
+            "tech" : ["html", "css"],
+
+
+            "actions" : {
+                "demo" : "/exercices/1/demo.html",
+                "download" :  "/exercices/1/download.html"
+            }
+        },
+        {
+            "id" : 2,
+            "status" : "En cours",
+
+            "date" : {
+                "post" : "04/03/2026",
+                "end" :  "06/03/2026"
+            },
+
+            "about" : {
+                "title" : "Interrupteur",
+                "desc" : "Allumer et éteindre une lampe"
+            },
+
+            "tech" : ["html", "css", "js"],
+
+
+            "actions" : {
+                "demo" : "/exercices/2/demo.html",
+                "download" :  "/exercices/2/download.html"
+            }
+        }
+    ]

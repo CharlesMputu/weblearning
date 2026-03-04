@@ -1,19 +1,8 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 
-
+    
     const bars = document.querySelector(".topbar .aside .bars")
 
-
-    // console.log(modalContent);
-
-    // const tr = window.getComputedStyle(modalContent)
-    // // matrix(1, 0, 0, 1, -300, 0)
-    // // console.log(tr.setProperty("transform"));
-
-
-    // // modalContent.style.transform = " matrix(1, 0, 0, 1, 0, 0)"
-    
-    
 
     // Modal
     
