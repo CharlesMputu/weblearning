@@ -7,7 +7,7 @@
 
             "date" : {
                 "post" : "04/03/2026",
-                "end" : "05/03/2026"
+                "end" : "04/03/2026"
             },
 
             "about" : {
@@ -34,7 +34,7 @@
 
             "about" : {
                 "title" : "Interrupteur",
-                "desc" : "Allumer et éteindre une lampe avec deux bouton"
+                "desc" : "Allumer et éteindre une lampe avec deux boutons"
             },
 
             "tech" : ["html", "css", "js"],
