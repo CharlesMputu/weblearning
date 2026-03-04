@@ -25,13 +25,15 @@ a{
     grid-template-rows: max-content 1fr;
     background-color: #fafafa;
     height: 100dvh;
-
 }
 
-.container .step{
-    text-align: center;
+.container .menu{
     padding: 1rem;
     background-color: #fff;
+}
+.container .menu .group{
+    display: grid;
+    gap: 1rem;
 }
 
 .container .main{
@@ -41,40 +43,45 @@ a{
 }
 
 .wrapper{
- display: grid;
- grid-template-columns: repeat(3, 1fr);
- grid-template-areas: "parent1 . parent2"
-                      ".   parent3  ."
-                      "parent4 . parent5";
-background-color: #fff;
-border: 1px solid #000;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px max-content;
+    /* border: 1px solid #000; */
 
 }
 
-.wrapper .item{
-    /* border: 1px solid #aaa; */
-    background-color: #000;
-    aspect-ratio: 1/1;
-    
+
+.wrapper .light{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper .light .icon{
+
+    font-size: 100px;
+    color: #aaa;
+    transition: color .2s;
+
+}
+.wrapper .panel{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
 
-.parent1{
-    grid-area: parent1;
+.wrapper .panel .item{
+    cursor: pointer;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
 }
-.parent2{
-    grid-area: parent2;
-    
+.wrapper .panel .on{
+    background-color: #0090ff;
 }
-.parent3{
-    grid-area: parent3;
-    
-}
-.parent4{
-    grid-area: parent4;
-}
-.parent5{
-    grid-area: parent5;
-    
+.wrapper .panel .off{
+    background-color: red;
 }
 
 

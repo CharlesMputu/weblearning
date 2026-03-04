@@ -34,7 +34,7 @@
 
             "about" : {
                 "title" : "Interrupteur",
-                "desc" : "Allumer et éteindre une lampe"
+                "desc" : "Allumer et éteindre une lampe avec deux bouton"
             },
 
             "tech" : ["html", "css", "js"],
