@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    color: #0090ff;
+    text-decoration: none;
+}
+
+
+
+.border{
+    border: 1px solid red;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    background-color: #fafafa;
+    height: 100dvh;
+}
+
+.container .menu{
+    padding: 1rem;
+    background-color: #fff;
+}
+.container .menu .group{
+    display: grid;
+    gap: 1rem;
+}
+
+.container .main{
+    display: grid;
+    align-items: center;
+    padding: 0 1rem ;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+ .form{
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    aspect-ratio: 2/1;
+    /* gap: 0.5rem; */
+ }
+ .form h3{
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+ }
+ .form textarea{
+    resize: none;
+    border-radius: 5px;
+    padding: 0.8rem;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #ddd;
+ }
+ .form textarea::placeholder{
+    font-style: italic;
+ }
+ .form .output{
+    color: #555;
+ }
+
+
+
+
+
+
+@media(min-width:768px){
+    .wrapper{
+        width: 480px;
+    }
+    .container .main{
+        justify-items: center;
+    }
+    .form{
+        aspect-ratio: 3/1;
+    }
+   
+}

@@ -3,11 +3,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const panelBtn = document.querySelectorAll(".panel .item")
     const light = document.querySelector(".light .icon")
 
-    console.log(panelBtn);
 
 
     panelBtn.forEach(btn =>{
-        console.log(btn);
 
         btn.addEventListener("click", (e)=>{
             e.preventDefault()
