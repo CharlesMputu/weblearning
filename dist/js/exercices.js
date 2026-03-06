@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async ()=>{
         exercices.innerHTML =  data.map( exercice =>  `
             <div class="item">
                 <div class="header">
-                    <p class"status">${parseInt(exercice.status) ? "Résoulu" : "En cours"}</p>
+                    <p class"status">${parseInt(exercice.status) ? "Résolu" : "En cours"}</p>
                     <h1>#${exercice.id}</h1>
                     <div class="state">
                         <p>Publié, le ${exercice.created_at}</p>
