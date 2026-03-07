@@ -180,3 +180,31 @@ a{
     transform: translateX(0px);
 }
 
+
+.text-wrap-auto{
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    /* width: 120px; */
+
+    --nbLine: 1; 
+    display: -webkit-box;
+    -webkit-line-clamp: var(--nbLine);
+    line-clamp: var(--nbLine);
+    -webkit-box-orient: vertical;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.text-wrap-auto-multi{
+    --nbLine: 2; 
+    display: -webkit-box;
+    -webkit-line-clamp: var(--nbLine);
+    line-clamp: var(--nbLine);
+    -webkit-box-orient: vertical;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-height: 4.5rem; */
+    /* width: 200px; */
+}

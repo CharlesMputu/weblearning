@@ -2,24 +2,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     
     const form  = document.querySelector(".form")
-    const chars = 50
+    const textarea  = document.querySelector("textarea")
+    const output = form.querySelector(".output")
+
+    const chars = parseInt(textarea.dataset.chars);
+    output.innerText = chars
+    
 
 
     form.addEventListener("submit", (e)=> e.preventDefault())
 
+    form.querySelector("textarea").addEventListener("input", (e)=>{
 
-    form.querySelector("textarea").addEventListener("beforeinput", (e)=>{
-
+        e.target.setAttribute("maxlength", chars)
+     
         const textareaLength = e.target.value.length
-
-        if(textareaLength === chars){
-            e.preventDefault()
-            return
-        }
-
-        const diff = (chars - textareaLength) -1
+        const diff = (chars - textareaLength)
 
         form.querySelector(".output").innerText = diff
+        
+ 
 
         
     })
