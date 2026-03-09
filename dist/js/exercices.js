@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async ()=>{
     const exercices = document.querySelector(".exercices")
 
     const api_url = `https://opensheet.elk.sh/1nCeJ3usXvVsRBmU_5o4gQOzz6V38q8DHAUaRQbGWdCM/exercices`
-    // const dataJson =  "data/exercices.json"
+    const dataJson =  "data/exercices.json"
     
 
     async function fetchData(url, name="api_data_sheets")
@@ -39,12 +39,13 @@ document.addEventListener("DOMContentLoaded", async ()=>{
 
     }
 
+    const response =  await fetchData(api_url)
 
-    const data  = await fetchData(api_url)
 
+    // for hors connexion 
 
-    console.log(data);
-    
+    const data  = response.length > 0 ? response : await fetchData(dataJson)
+
 
     if(data.length > 0){
         
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async ()=>{
                 <div class="details">
                     <div>
                         <h3 class="title text-wrap-auto">${exercice.title}</h3>
-                        <p class="subtitle text-wrap-auto">${exercice.desc}</p>
+                        <p class="subtitle text-wrap-auto-multi">${exercice.desc}</p>
                     </div>
                     <a href="/exercices/${exercice.id}/demo.html"" class="demo">Demo</a>
                 </div>
