@@ -2,6 +2,13 @@
 
 /* Mediaqueries */
 
+@media(max-width:500px){
+  .filter .group{
+        justify-content: space-between;
+    }
+}
+
+
 @media(min-width:768px){
 
     .topbar .aside .bars{ display: none;}
@@ -18,11 +25,12 @@
     .exercices{
         grid-template-columns: repeat(3, 1fr);
     }
+
 }
 
 
 @media(min-width:1200px){
-    .topbar, .main{
+    .topbar, .filter, .exercices{
         --pd : 10rem;
         padding-left: var(--pd);
         padding-right: var(--pd);

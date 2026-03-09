@@ -110,7 +110,7 @@ a{
     -ms-overflow-style: none; /* Cache la barre sur IE/Edge */
     scrollbar-width: none; /* Cache la barre sur Firefox */
     /* background-color: blue; */
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 .main::-webkit-scrollbar {
     display: none; /* Cache la barre sur Chrome/Safari */
