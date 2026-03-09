@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", async ()=>{
                 </div>
                 <div class="details">
                     <div>
-                        <h3 class="title text-wrap-auto">Système de login</h3>
-                        <p class="subtitle text-wrap-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet nemo harum totam eos dolor sapiente a repudiandae asperiores quos cumque, consequatur impedit autem tempore possimus delectus architecto inventore magnam alias? </p>
+                        <h3 class="title text-wrap-auto">${exercice.title}</h3>
+                        <p class="subtitle text-wrap-auto">${exercice.desc}</p>
                     </div>
                     <a href="/exercices/${exercice.id}/demo.html"" class="demo">Demo</a>
                 </div>
