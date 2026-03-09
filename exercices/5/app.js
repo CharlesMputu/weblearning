@@ -1,51 +1,45 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 
-    const icons = document.querySelectorAll(".icons .item")
-    const about = document.querySelector(".main .about")
-
-    const store = sessionStorage
+    const items = document.querySelectorAll(".icons .item")
+    const main = document.querySelector(".main")
 
 
-    function backGroundColorChange (color)
+    function modeToggle (mode)
     {
-        document.body.style.backgroundColor = color
+        const body = document.body
 
-        if(color === "white"){
-            about.style.color = "#000"    
-        }else{
-            about.style.color = "#fff"    
-        }
+        mode === "moon" ? body.classList.add("dark-active") : body.classList.remove("dark-active")
+        
     }
 
 
+    
 
-    icons.forEach(icon =>{
+    items.forEach(item => {
 
-        icon.addEventListener("click", (e)=>{
+        // console.log(item);
+
+        item.addEventListener("click", (e)=>{
             e.preventDefault()
+
+            // suprimer la classe .active
+
+            items.forEach(element => element.classList.remove("active"))
+
+            // ajouter la classe .active sur l'element cliqué
+
+            e.currentTarget.classList.add("active")
+
+
+            // Changer le mode
+
+            const mode = e.currentTarget.dataset.mode
+
+            modeToggle(mode)
+
             
-            const color = e.target.dataset.bgcolor
-
-            // sauvegarder
-
-            store.setItem("bgcolor", color)
-
-            // On affecte
-
-            backGroundColorChange(color)
-
         })
         
-    })
-
-
-    window.addEventListener("load", ()=>{
-        
-        const color = store.getItem("bgcolor")
-
-        if(color !== null){
-            backGroundColorChange(color)
-        }
-        
-    })
+    } )
+  
 })

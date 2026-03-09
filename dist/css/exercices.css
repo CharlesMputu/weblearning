@@ -76,7 +76,7 @@
 
 .exercices .item .details{
     display: grid;
-    grid-template-columns: 1fr 80px;
+    grid-template-columns: 1fr 70px;
     align-items: center;
     align-content: center;
     font-size: 14px;
@@ -94,7 +94,7 @@
 }
 
 .exercices .item .details .demo{
-    padding: 0.65rem 1rem;
+    padding: 0.5rem 0.7rem;
     background-color: #000;
     color: #fff;
     border-radius: 100px;

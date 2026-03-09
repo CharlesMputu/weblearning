@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 
+
     const icons = document.querySelectorAll(".icons .item")
     const about = document.querySelector(".main .about")
 

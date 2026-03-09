@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", async ()=>{
                 <div class="details">
                     <div>
                         <h3 class="title text-wrap-auto">${exercice.title}</h3>
-                        <p class="subtitle text-wrap-auto-multi">${exercice.desc}</p>
+                        <p class="subtitle text-wrap-auto">${exercice.desc}</p>
                     </div>
-                    <a href="/exercices/${exercice.id}/demo.html"" class="demo">Demo</a>
+                    <a href="/exercices/${exercice.id}/demo.html"" class="demo">Démo</a>
                 </div>
             </div>
         `).join("")
