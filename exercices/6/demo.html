@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/dist/css/icons/css/all.min.css">
+
+    <title>Execices #5</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper ">
+            <div class="start">
+                <div class="item ">
+                    <form action="" method="post" class="grid-generate">
+                        <div class="group">
+                            <label for="cols">Nombre de colonnes</label>
+                            <input type="number" name="cols" id="cols" min="1" max="10" placeholder="Nombre de colonnes" required>
+                        </div>
+                        <div class="group">
+                            <label for="cols">Nombre de lignes</label>
+                            <input type="number" name="rows" id="rows" min="1" max="10" placeholder="Nombre de lignes" required>
+                        </div>
+                        <button type="submit" class="submit">Générer</button>
+                    </form>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="msg">
+                    <p>Le résultat s'affichera ici</p>
+                    <!-- <p>Création de la grid en cours...</p> -->
+                </div>
+            </div>
+     
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>

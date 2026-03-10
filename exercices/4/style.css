@@ -48,7 +48,12 @@ body{
     border-radius: 100px;
     border: 1px solid #fff;
     cursor: pointer;
+
+    display: grid;
+    place-items: center;
 }
+
+
 
 .icons .item[data-bgcolor="red"]{ background-color: red;}
 .icons .item[data-bgcolor="green"]{ background-color: green;}
@@ -71,6 +76,7 @@ body{
     font-size: 14px;
     padding: 1rem;
     text-wrap: wrap;
+    text-align: center;
 }
 
 
