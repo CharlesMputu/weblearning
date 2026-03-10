@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", async ()=>{
 
     const exercices = document.querySelector(".exercices")
+    const loader = document.querySelector(".loader")
     const store = sessionStorage
     let data =  []
 
+
+
+        
     
 
     async function fetchData()
@@ -11,13 +15,19 @@ document.addEventListener("DOMContentLoaded", async ()=>{
 
         try {
                 
+            
+            
             if(!store.getItem("api")){
+                
+                loader.classList.remove("hidden")
+
+                await new Promise(resolve => setTimeout(resolve, 2000))
 
                 const api  = `https://opensheet.elk.sh/1nCeJ3usXvVsRBmU_5o4gQOzz6V38q8DHAUaRQbGWdCM/exercices`
 
-                const dataJson = "data/exercices.json"
+                // const dataJson = "data/exercices.json"
 
-                const response = await fetch(dataJson)
+                const response = await fetch(api)
 
                 if(!response.ok){
                     throw new Error("Erreur réseau");
@@ -27,16 +37,15 @@ document.addEventListener("DOMContentLoaded", async ()=>{
 
                 store.setItem("api", JSON.stringify(data))
 
+                renderData(data)
+
                 return
 
             }
 
             data = JSON.parse(store.getItem("api"))
 
-
             renderData(data)
-        // afficher loader
-
 
 
         // console.log(response);
@@ -45,6 +54,8 @@ document.addEventListener("DOMContentLoaded", async ()=>{
             exercices.innerHTML = `<p>Vérifiez votre connexion et réessayez</p>`
     }finally{
         // cacher le loader ici
+        loader.classList.add("hidden")
+
     }
         
     }

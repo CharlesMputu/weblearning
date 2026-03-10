@@ -6,6 +6,16 @@
 }
 
 
+.loader{
+    margin-top: 50px;
+    color: #555;
+    text-align: center;
+    background-color: transparent;
+}
+.hidden{
+    display: none;
+}
+
 .exercices .item{
     display: grid;
     grid-template-rows: 1fr max-content;
