@@ -23,8 +23,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
 
 
-        
+
         grid.innerHTML = `<div class="msg"><p>Création de la grid en cours...</p></div>`
+        
 
         setTimeout(() => {
             
