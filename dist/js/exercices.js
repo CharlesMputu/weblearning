@@ -4,24 +4,39 @@ document.addEventListener("DOMContentLoaded", async ()=>{
     const store = sessionStorage
     let data =  []
 
+    
+
     async function fetchData()
     {
+
         try {
-            
+                
+            if(!store.getItem("api")){
+
+                const api  = `https://opensheet.elk.sh/1nCeJ3usXvVsRBmU_5o4gQOzz6V38q8DHAUaRQbGWdCM/exercices`
+
+                const dataJson = "data/exercices.json"
+
+                const response = await fetch(dataJson)
+
+                if(!response.ok){
+                    throw new Error("Erreur réseau");
+                }
+
+                data = await response.json()
+
+                store.setItem("api", JSON.stringify(data))
+
+                return
+
+            }
+
+            data = JSON.parse(store.getItem("api"))
+
+
+            renderData(data)
         // afficher loader
-     
-        const api  = `https://opensheet.elk.sh/1nCeJ3usXvVsRBmU_5o4gQOzz6V38q8DHAUaRQbGWdCM/exercices`
-        const dataJson = "data/exercices.json"
 
-        const response = await fetch(api)
-
-        if(!response.ok){
-            throw new Error("Erreur réseau");
-        }
-
-        data = await response.json()
-
-        renderData(data)
 
 
         // console.log(response);
@@ -47,7 +62,9 @@ document.addEventListener("DOMContentLoaded", async ()=>{
                     <div class="wrapper ">
                         <div class="header ">
                             <p class="badge">#${exercice.id}</p>
-                            <p class="status subtitle">${parseInt(exercice.status) ? "Résolu" : "En cours"}</p>
+                            <p class="status subtitle">
+                                ${exercice.status === "resolved" ? "Résolu" : "En cours"}
+                            </p>
                         </div>
                         <div class="content ">
                             <div class="group">
@@ -115,9 +132,8 @@ document.addEventListener("DOMContentLoaded", async ()=>{
                 return
             }
 
-            const type = filterName === "resolved" ? 1 : 0
 
-            const dataFilter = data.filter(d => parseInt(d.status) === type)
+            const dataFilter = data.filter(d => d.status === filterName)
             renderData(dataFilter);
 
             

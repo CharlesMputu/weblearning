@@ -4,7 +4,7 @@
         "id":"1",
         "title":"CSS - Grid",
         "desc":"Création de la structure de jeux de dame avec seulement 5 éléments",
-        "status":"1",
+        "status":"resolved",
         "tech":"htm, css",
         "created_at":"04/03/2026 00:30",
         "expired_at":"04/03/2026 22:00"
@@ -14,7 +14,7 @@
         "id":"2",
         "title":"Interrupteur",
         "desc":"Allumer ou éteindre une lampe avec deux boutons",
-        "status":"1",
+        "status":"resolved",
         "tech":"html, css, js",
         "created_at":"04/03/2026 10:30",
         "expired_at":"06-03-2026 22:00"
@@ -23,7 +23,7 @@
         "id":"3",
         "title":"Formulaire - Textearea",
         "desc":"Limitez le nombre de caractères saisis par l'utilisateur",
-        "status":"1",
+        "status":"pending",
         "tech":"html, css, js",
         "created_at":"06/03/2026 17:00",
         "expired_at":"08-03-2026 22:00"
@@ -32,7 +32,7 @@
         "id":"4",
         "title":"Changer la couler de fond",
         "desc":"Changement dynamique de la couleur de fond avec transition ",
-        "status":"0",
+        "status":"pending",
         "tech":"html, css, js",
         "created_at":"09-03-2026 01:30",
         "expired_at":"09-03-2026 22:00"
